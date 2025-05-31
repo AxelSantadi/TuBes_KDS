@@ -33,7 +33,7 @@ async def run_ga_endpoint(
         # Asumsi file CSV "Evolution_DataSets.csv" [cite: 31]
         # Anda mungkin perlu memproses file CSV ini lebih lanjut
         # Misalnya, memisahkan fitur (X) dan label (y)
-        # data_df = pd.read_csv(io.BytesIO(contents)) 
+        data_df = pd.read_csv(io.BytesIO(contents)) 
 
         # Placeholder untuk data dan label
         # features_df = data_df.drop(columns=[target_column])
@@ -56,7 +56,7 @@ async def run_ga_endpoint(
         # Konversi kromosom terbaik ke daftar nama fitur (jika Anda punya daftar nama fitur)
         # column_names = features_df.columns.tolist()
         # selected_features = [col for i, col in enumerate(column_names) if best_features_chromosome[i] == 1]
-        selected_features_placeholder = ["Cranial_Capacity", "Height", "Jaw_Shape"] # Contoh [cite: 32, 41]
+        selected_features_placeholder = ['Current_Country', 'Habitat', 'Canine Size', 'Arms', 'Diet']
 
 
         return {

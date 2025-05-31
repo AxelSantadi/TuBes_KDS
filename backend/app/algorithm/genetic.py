@@ -1,6 +1,5 @@
 import random
 import numpy as np
-from tensor import *
 import copy
 
 class GeneticAlgo:

@@ -1,12 +1,3 @@
-'''
-Genetic Algorithm Module 
-'''
-
-'''
-Applied genetic algorithm in diagonal magic cube problem
-'''
-
-# Import Relevant Libraries
 import random
 import numpy as np
 from tensor import *

@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+pandas
+scikit-learn  # Untuk pre-processing, SVM (seperti disebut di proposal [cite: 10]), dan cross-validation [cite: 28, 44]
+numpy
+# Tambahkan library lain yang mungkin dibutuhkan untuk GA atau analisis data

@@ -81,7 +81,7 @@ class GeneticAlgorithmFeatureSelection:
             current_best_fitness_in_gen = np.max(self.fitness_scores)
             current_best_chromo_in_gen = self.population[np.argmax(self.fitness_scores)]
 
-            self.convergence_log.append(current_best_fitness_in_gen)
+            self.convergence_log.append((gen + 1, current_best_fitness_in_gen, list(current_best_chromo_in_gen)))
 
             if current_best_fitness_in_gen > self.best_fitness_overall:
                 self.best_fitness_overall = current_best_fitness_in_gen

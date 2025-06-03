@@ -8,33 +8,11 @@ import numpy as np
 # Ini adalah fitur-fitur yang nilainya akan dioptimasi/dievolusikan oleh GA.
 # Daftar ini harus sesuai dengan input yang akan diberikan pengguna di frontend.
 FEATURE_ORDER = [
-    'Time',             # Numerik (misal, dalam juta tahun)
-    'Location',         # Kategorikal (misal, Afrika, Asia, Eropa)
-    'Zone',             # Kategorikal (misal, Tropis, Subtropis, Gurun)
-    'Current_Country',  # Kategorikal (Nama negara)
-    'Habitat',          # Kategorikal (misal, Hutan, Padang Rumput, Gua)
-    'Cranial_Capacity', # Numerik (misal, dalam cc)
-    'Height',           # Numerik (misal, dalam cm atau feet)
-    'Incisor_Size',     # Numerik (ukuran relatif atau absolut)
-    'Jaw_Shape',        # Kategorikal (misal, Parabolic, U-shaped)
-    'Torus_Supraorbital',# Kategorikal/Biner (misal, Ada, Tidak Ada, Sedang)
-    'Prognathism',      # Kategorikal/Numerik (tingkat prognatisme, misal, Rendah, Sedang, Tinggi)
-    'Foramen_Magnum_Position', # Kategorikal (misal, Posterior, Tengah, Anterior)
-    'Canine_Size',      # Numerik (ukuran relatif atau absolut)
-    'Canines_Shape',    # Kategorikal (misal, Spatulate, Conical)
-    'Tooth_Enamel',     # Kategorikal/Numerik (misal, Tipis, Sedang, Tebal)
-    'Tecno',            # Kategorikal/Biner (misal, Ada, Tidak Ada - penggunaan teknologi)
-    'Tecno_type',       # Kategorikal (misal, Oldowan, Acheulean, Mousterian)
-    'biped',            # Kategorikal/Biner (misal, Obligat, Fakultatif, Tidak)
-    'Arms',             # Kategorikal (misal, Panjang relatif terhadap kaki)
-    'Foots',            # Kategorikal (misal, Arch, Opposable toe)
-    'Diet',             # Kategorikal (misal, Herbivora, Karnivora, Omnivora)
-    'Sexual_Dimorphism',# Kategorikal/Numerik (misal, Rendah, Sedang, Tinggi)
-    'Hip',              # Kategorikal (bentuk panggul)
-    'Vertical_Front',   # Kategorikal/Biner (dahi vertikal)
-    'Anatomy',          # Kategorikal (mungkin terlalu umum, perlu dispesifikasi atau dipecah)
-    'Migrated',         # Kategorikal/Biner (apakah spesies ini bermigrasi dari lokasi asal)
-    'Skeleton'          # Kategorikal (karakteristik penting kerangka, misal, Gracile, Robust)
+    'Current_Country',
+    'Habitat',
+    'Canine_Size', # Perhatikan penulisan 'Canine Size' (dengan spasi)
+    'Arms',
+    'Diet'
 ]
 
 # 2. Rentang Nilai dan Kategori Valid untuk Setiap Fitur
@@ -72,7 +50,9 @@ FEATURE_DETAILS = {
     'Skeleton': {'type': 'categorical', 'categories': ['light', 'robust', 'refined']} # Terkait dengan robustisitas
 }
 # Pastikan semua fitur di FEATURE_ORDER ada di FEATURE_DETAILS
-assert all(feature in FEATURE_DETAILS for feature in FEATURE_ORDER), "Tidak semua fitur di FEATURE_ORDER ada di FEATURE_DETAILS"
+assert all(feature in FEATURE_DETAILS for feature in FEATURE_ORDER), \
+    "Tidak semua fitur di FEATURE_ORDER baru (5 fitur) ada di FEATURE_DETAILS. Periksa nama fitur 'Canine Size'."
+
 NUM_FEATURES = len(FEATURE_ORDER)
 
 def initialize_chromosome():

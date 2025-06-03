@@ -76,8 +76,8 @@ data_load_error = None
 # Identifikasi kolom numerik dan kategorikal asli berdasarkan FEATURE_DETAILS
 # Ini akan digunakan oleh fungsi fitness
 # Pastikan FEATURE_DETAILS sudah diimpor dengan benar
-ORIGINAL_NUMERICAL_COLS = [f for f, details in FEATURE_DETAILS.items() if details['type'] == 'numerical' and f in FEATURE_ORDER]
-ORIGINAL_CATEGORICAL_COLS = [f for f, details in FEATURE_DETAILS.items() if details['type'] == 'categorical' and f in FEATURE_ORDER]
+ORIGINAL_NUMERICAL_COLS = [f for f in FEATURE_ORDER if FEATURE_DETAILS[f]['type'] == 'numerical']
+ORIGINAL_CATEGORICAL_COLS = [f for f in FEATURE_ORDER if FEATURE_DETAILS[f]['type'] == 'categorical']
 LABEL_COL_IN_DATASET = 'Genus_&_Specie' # Sesuai dokumen
 
 @app.on_event("startup")

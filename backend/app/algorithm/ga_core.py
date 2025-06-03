@@ -4,16 +4,18 @@ import random
 import numpy as np
 from .fitness import calculate_combined_fitness
 from .operators import tournament_selection, uniform_crossover, combined_mutation
+from .chromosome_setup import FEATURE_ORDER
 # from .operators import tournament_selection, combined_crossover, combined_mutation
 
 class GeneticAlgorithmFeatureSelection:
-    def __init__(self, original_df, label_col, all_original_feature_names,
+    def __init__(self, original_df, label_col,
                  numerical_cols_original, categorical_cols_original,
                  target_genus_specie_for_ga: str,
                  initial_user_params_for_ga: dict, # Ini adalah dict {nama_fitur: nilai}
                  population_size=50, num_generations=20,
                  crossover_prob=0.8, mutation_prob=0.01,
-                 num_features=27,
+                 num_features=5,
+                 all_original_feature_names=list(FEATURE_ORDER),
                  fitness_params: dict = None): # (27 atribut)
 
         self.original_df = original_df

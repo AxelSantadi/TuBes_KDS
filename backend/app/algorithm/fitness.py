@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import jaccard_score # Atau metrik jarak lain
-from chromosome_setup import FEATURE_ORDER, FEATURE_DETAILS 
+from .chromosome_setup import FEATURE_ORDER, FEATURE_DETAILS 
 import random
 
 # --- Helper Functions ---

@@ -1,0 +1,38 @@
+{
+  "user_feature_inputs": {
+    "Time": 1.5,
+    "Location": "Africa",
+    "Zone": "oriental",
+    "Current_Country": "Kenya",
+    "Habitat": "mixed",
+    "Cranial_Capacity": 700,
+    "Height": 150,
+    "Incisor_Size": "big",
+    "Jaw_Shape": "V shape",
+    "Torus_Supraorbital": "very protruding",
+    "Prognathism": "medium",
+    "Foramen_Magnum_Position": "posterior",
+    "Canine_Size": "big",
+    "Canines_Shape": "conicalls",
+    "Tooth_Enamel": "thick",
+    "Tecno": "yes",
+    "Tecno_type": "mode 1",
+    "biped": "yes",
+    "Arms": "manipulate",
+    "Foots": "walk",
+    "Diet": "omnivore",
+    "Sexual_Dimorphism": "High",
+    "Hip": "wide",
+    "Vertical_Front": "yes",
+    "Anatomy": "modern",
+    "Migrated": "no",
+    "Skeleton": "robust"
+  },
+  "ga_params": {
+    "population_size": 30,
+    "num_generations": 10,
+    "crossover_prob": 0.85,
+    "mutation_prob": 0.05
+  },
+  "target_genus_specie": "Homo Sapiens"
+}
